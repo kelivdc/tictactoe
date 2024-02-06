@@ -12,6 +12,8 @@ class GamesController < ApplicationController
     session[:board] = ["","","","","","","","",""]
     session[:x] = @game.player_a
     session[:o] = @game.player_b
+    session[:total_click] = 0
+    max_cell = 9
     marks = ["O","X"]
     session[:marks] = marks
     respond_to do |format|
@@ -43,19 +45,6 @@ class GamesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /games/1 or /games/1.json
-  def update
-    respond_to do |format|
-      if @game.update(game_params)
-        format.html { redirect_to game_url(@game), notice: "Game was successfully updated." }
-        format.json { render :show, status: :ok, location: @game }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @game.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   def click
     session[:current_player] = session[:marks].rotate![0]
     player = session[:current_player]
@@ -80,6 +69,15 @@ class GamesController < ApplicationController
                   $('#player_a').removeClass('turn');
                   $('#player_b').removeClass('turn');
                   "
+  else
+    session[:total_click] += 1
+    if session[:total_click] >= 9
+      body_render += "
+          $('#winner').html('<strong>Draw</strong>');
+          $('#player_a').removeClass('turn');
+          $('#player_b').removeClass('turn');
+        "
+    end
   end
   body_render += " });</script>"
     render inline: body_render
