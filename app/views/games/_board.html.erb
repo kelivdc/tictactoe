@@ -1,0 +1,18 @@
+<h1>Tic-tac-toe BOARD</h1>
+<div class="space-y-8" id="board">
+  <div class="flex space-x-8">
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "1") %>" hx-swap="outerHTML"></div>
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "2") %>" hx-swap="outerHTML"></div>
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "3") %>" hx-swap="outerHTML"></div>
+ </div>
+  <div class="flex space-x-8">
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "4") %>" hx-swap="outerHTML"></div>
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "5") %>" hx-swap="outerHTML"></div>
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "6") %>" hx-swap="outerHTML"></div>
+ </div>
+  <div class="flex space-x-8">
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "7") %>" hx-swap="outerHTML"></div>
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "8") %>" hx-swap="outerHTML"></div>
+    <div class="cell empty-cell" hx-get="<%= click_url(id: @game.id, cell: "9") %>" hx-swap="outerHTML"></div>
+ </div>
+</div>

@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: games
+#
+#  id         :integer          not null, primary key
+#  player_a   :string
+#  player_b   :string
+#  winner     :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  player_a: MyString
+  player_b: MyString
+  winner: MyString
+
+two:
+  player_a: MyString
+  player_b: MyString
+  winner: MyString

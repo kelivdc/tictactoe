@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
+.cell {
+  @apply border p-4 h-14 w-14 text-center bg-white text-black  cursor-crosshair;
+}
+.empty-cell {
+  @apply shadow-md;
 }
 
-*/
+.turn {
+  @apply border border-blue-700;
+}

@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project for answering Technical Test for RoR engineer
 
-Things you may want to cover:
+Author
+Arie Ardiansyah
 
-* Ruby version
+Project name
+Tic Tac Toe
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -1,0 +1,16 @@
+<div id="<%= dom_id game %>">
+  <p class="my-5 p-2 turn" id="player_a">
+    <strong class="block font-medium mb-1">Player X</strong>
+    <%= game.player_a %>
+  </p>
+
+  <p class="my-5 p-2" id="player_b">
+    <strong class="block font-medium mb-1">Player O</strong>
+    <%= game.player_b %>
+  </p>
+
+  <p class="my-5 p-2">
+    <strong class="block font-medium mb-1">Winner</strong>
+    <span id="winner">-</span>
+  </p>  
+</div>
